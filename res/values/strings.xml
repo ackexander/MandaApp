@@ -8,5 +8,7 @@
     <string name="yakatana">Yakatana</string>
     <string name="images">Bilder</string>
     <string name="search_hint">Sök på wikin</string>
+    <string name="number_of_persons">Antal Yakatanaätare: </string>
+    <string name="make">Laga</string>
 
 </resources>
