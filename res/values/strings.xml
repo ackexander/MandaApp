@@ -3,5 +3,10 @@
 
     <string name="hello">Hello World, MandaAppActivity!</string>
     <string name="app_name">MandaApp</string>
+    <string name="search">Sök</string>
+    <string name="psanger">Psånger</string>
+    <string name="yakatana">Yakatana</string>
+    <string name="images">Bilder</string>
+    <string name="search_hint">Sök på wikin</string>
 
 </resources>
