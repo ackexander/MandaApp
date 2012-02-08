@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TableRow;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class YakatanaActivity extends Activity {
@@ -19,7 +19,7 @@ public class YakatanaActivity extends Activity {
 	}
 
 	public void generateYakatanaRecipe(View view) {
-		TableRow recipeTable = (TableRow) findViewById(R.id.recipeTable);
+		LinearLayout recipeTable = (LinearLayout) findViewById(R.id.recipeTable);
 		recipeTable.setVisibility(View.VISIBLE);
 		try {
 			displayRecipe();

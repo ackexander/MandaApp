@@ -26,6 +26,8 @@ public class MandaAppActivity extends Activity {
 
 	public void songList(View view) {
 		System.out.println("songs");
+		Intent intent = new Intent(this, SongActivity.class);
+		startActivity(intent);
 	}
 
 	public void imageGallery(View view) {
