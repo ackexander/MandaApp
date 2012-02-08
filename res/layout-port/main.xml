@@ -13,9 +13,9 @@
         android:contentDescription="@string/app_name"
         android:src="@drawable/manda_logo" />
 
-    <LinearLayout
-        android:id="@+id/actionsLayout"
-        android:layout_width="match_parent"
+    <TableRow
+        android:id="@+id/actionRow"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center" >
 
@@ -40,29 +40,36 @@
             android:onClick="imageGallery"
             android:text="@string/images" />
 
-    </LinearLayout>
+    </TableRow>
 
-    <LinearLayout
-        android:id="@+id/wikiLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
 
-        <EditText
-            android:id="@+id/wikiSearchText"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/wikiLayout"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" 
-            android:hint="@string/search_hint">
-            <requestFocus />
-        </EditText>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true" >
 
-        <Button
-            android:id="@+id/wikiButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.18"
-            android:onClick="searchWiki"
-            android:text="@string/search" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/wikiSearchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/search_hint" />
+
+            <Button
+                android:id="@+id/wikiButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.18"
+                android:onClick="searchWiki"
+                android:text="@string/search" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </LinearLayout>
