@@ -1,34 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/yakatanaLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
+        android:id="@+id/yakatanaAmountLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
-
+
         <TextView
             android:id="@+id/numberOfPersonsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/number_of_persons"
             android:textAppearance="?android:attr/textAppearanceMedium" />
-
+
         <EditText
             android:id="@+id/numberOfPersonsEditText"
             android:layout_width="102dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
+            android:layout_weight="1"
+            android:hint="@string/personsHint" />
+        <Button
             android:id="@+id/makeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.34"
+            android:onClick="generateYakatanaRecipe"
             android:text="@string/make" />
-
     </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/recipeScrollLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/recipeTable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="invisible" android:alwaysDrawnWithCache="false">
+
+            <LinearLayout
+                android:id="@+id/totalFoodLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/totalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/meatText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/meat" />
+
+                <TextView
+                    android:id="@+id/onionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onion" />
+
+                <TextView
+                    android:id="@+id/garlicText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/garlic" />
+
+                <TextView
+                    android:id="@+id/chiliSauceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chilisauce" />
+
+                <TextView
+                    android:id="@+id/chiliText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chili" />
+
+                <TextView
+                    android:id="@+id/pepperText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pepper" />
+
+                <TextView
+                    android:id="@+id/saltText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/salt" />
+
+                <TextView
+                    android:id="@+id/tabascoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tabasco" />
+
+                <TextView
+                    android:id="@+id/oreganoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/oregano" />
+
+                <TextView
+                    android:id="@+id/waterText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/water" />
+
+                <TextView
+                    android:id="@+id/sourMilkText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sourmilk" />
+
+                <TextView
+                    android:id="@+id/fraicheText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fraiche" />
+
+                <TextView
+                    android:id="@+id/philCheseseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/philCheese" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/totalSauceLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/sauceTot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/garlicSauce"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/sauceSourMilkText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sourmilk" />
+
+                <TextView
+                    android:id="@+id/sauceFraicheText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fraiche" />
+
+                <TextView
+                    android:id="@+id/saucePhilCheeseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/philCheese" />
+
+                <TextView
+                    android:id="@+id/sauceSaltText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/salt" />
+
+                <TextView
+                    android:id="@+id/sauceGarlicText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/garlic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/otherLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/otherText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/saladText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/salad" />
+
+                <TextView
+                    android:id="@+id/cucumberText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cucumber" />
+
+                <TextView
+                    android:id="@+id/tomatText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tomat" />
+
+                <TextView
+                    android:id="@+id/pineappleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pineapple" />
+
+                <TextView
+                    android:id="@+id/chipsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chips" />
+            </LinearLayout>
+        </TableRow>
+    </ScrollView>
 
 </LinearLayout>

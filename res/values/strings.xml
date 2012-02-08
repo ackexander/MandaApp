@@ -10,5 +10,27 @@
     <string name="search_hint">Sök på wikin</string>
     <string name="number_of_persons">Antal Yakatanaätare: </string>
     <string name="make">Laga</string>
+    <string name="meat">Köttfärs: %s</string>
+    <string name="total">Totalt</string>
+    <string name="onion">Gul lök: %s</string>
+    <string name="garlic">Vitlök: %s</string>
+    <string name="chilisauce">Chilisås: %s</string>
+    <string name="chili">Chilipulver: %s</string>
+    <string name="pepper">Svartpeppar: %s</string>
+    <string name="salt">Örtsalt: %s</string>
+    <string name="tabasco">Tabasco: %s</string>
+    <string name="oregano">Oregano: %s</string>
+    <string name="water">Vatten: %s</string>
+    <string name="sourmilk">Filmjölk: %s</string>
+    <string name="fraiche">Cremé Fraiche: %s</string>
+    <string name="philCheese">Liten Philadelphiaost: %s</string>
+    <string name="garlicSauce">Varav sås</string>
+    <string name="other">Tillbehör</string>
+    <string name="salad">Sallad</string>
+    <string name="cucumber">Gurka</string>
+    <string name="tomat">Tomat</string>
+    <string name="pineapple">Krossad Ananas</string>
+    <string name="chips">Potatischips</string>
+    <string name="personsHint">Number of persons</string>
 
 </resources>
