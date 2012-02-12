@@ -39,7 +39,6 @@
             android:layout_height="wrap_content"
             android:onClick="imageGallery"
             android:text="@string/images" />
-
     </TableRow>
 
     <RelativeLayout
@@ -47,28 +46,23 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
 
-        <LinearLayout
-            android:id="@+id/wikiLayout"
-            android:layout_width="fill_parent"
+        <Button
+            android:id="@+id/wikiButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true" >
+            android:layout_alignParentRight="true"
+            android:onClick="searchWiki"
+            android:text="@string/search" />
 
-            <EditText
-                android:id="@+id/wikiSearchText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/search_hint" />
-
-            <Button
-                android:id="@+id/wikiButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.18"
-                android:onClick="searchWiki"
-                android:text="@string/search" />
-        </LinearLayout>
+        <EditText
+            android:id="@+id/wikiSearchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/wikiButton"
+            android:hint="@string/search_hint" />
 
     </RelativeLayout>
 

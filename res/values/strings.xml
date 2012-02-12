@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="next">Nästa</string>
+    <string name="prev">Föregående</string>
     <string name="hello">Hello World, MandaAppActivity!</string>
     <string name="app_name">MandaApp</string>
     <string name="search">Sök</string>
@@ -31,22 +33,78 @@
     <string name="tomat">Tomat</string>
     <string name="pineapple">Krossad Ananas</string>
     <string name="chips">Potatischips</string>
-    <string name="personsHint">Number of persons</string>
+    <string name="personsHint"></string>
     <string name="balladenOmDenKaxigaMyran">Jag uppstämma vill min lyra\nfast det blott är en gitarr,\noch berätta om en myra\nsom gick ut att leta barr.\nHan gick ut i morgondiset\nse\'n han druckit sin choklad\noch försvann i lingonriset\n||: både mätt och nöjd och glad. :||\n\nDet var långan väg att vandra,\ndet var långt till närmsta tall.\nHan kom bort ifrån de andra\nmen var glad i alla fall.\nFemti meter ifrån stacken\njust när solnedgången kom\nhitta\' han ett barr på backen\n||: som han tyckte mycket om. :||\n\nFör att lyfta fick han stånka\nhan fich spänna varje lem,\nmen så började han kånka\npå det fina barret hem.\nNär han gått i fyra timmar\nkom han till en ölbutelj.\nHan såg allting som i dimma,\n||: bröstet hävdes som en bälg. :||\n\nDen låg kvar sen förra lörda\'n.\nJag ska släcka törsten min,\ntänkte han och lade bördan\nutanför och klättra in.\nHan drack upp den sista droppen\nsom fanns kvar i hans butelj,\nsedan slog han sig för kroppen\n||: och skrek ut: "Jag är en älg!" :||\n\nEj ett barr jag drar till tjället\nnu så ska jag tamigfan\nlämna skogen och i stället\nvända upp och ner på stan.\nMen han kom aldrig till staden\nnågot spärrade hans stig;\nEn koloss där låg bland bladen\n||: och vår myra hejdar sig. :||\n\nDen var hiskelig att skåda\nden var stor och den var grå,\noch vår myra skrek: "Anåda,\nom du hindrar mig att gå!"\nHan for ilsken på kolossen\nsom låg utsträckt i hans väg,\nmen vår myra kom ej loss sen;\n||: Han satt fast som i en deg :||\n\nSorgligt slutar denna sången\nmyran stretade och drog,\nmen kolossen höll honom fången\ntills han svalt ihjäl och dog.\nUndvik alkoholens yra;\ndu blir stursk, men kroppen loj,\noch om du är född till myra\n||: brottas aldrig med en TOY! :||</string>
     <string name="enMandaGarPaVagen">En måndá går på vägen\nmed spaden i sin hand\nHan sjunger om en traktor\nsom flyttar massa sand\n
-Han är på väg till kåren\ni en gulgrön väst\noch när han kommer fram så är där århundradets fest\n
-Röj Röj... Måndá!
+		Han är på väg till kåren\ni en gulgrön väst\noch när han kommer fram så är där århundradets fest\n
+		Röj Röj… Måndá!\n\n
 
-Till festen har han blandat\nen massa fiskebåt\nHan dricker upp det mesta\noch faller ner i gråt\n
-Då kommer hans kamrater\noch frågar om han vill\nfölja med dem ut i busken för nu ska dem slå en drill\n
-Raj Raj...
+		Till festen har han blandat\nen massa fiskebåt\nHan dricker upp det mesta\noch faller ner i gråt\n
+		Då kommer hans kamrater\noch frågar om han vill\nfölja med dem ut i busken för nu ska dem slå en drill\n
+		Raj Raj…\n\n
 
-De tömmer sina blåser\noch tar sig sen en titt\nderas nyvattnade buskar\nstår i rondellens mitt\n
-De rundar snabbt rondellen\noch finner där en kon\nde bär den med sig hem och sedan bygger den en tron\n
-Raj Raj...
+		De tömmer sina blåser\noch tar sig sen en titt\nderas nyvattnade buskar\nstår i rondellens mitt\n
+		De rundar snabbt rondellen\noch finner där en kon\nde bär den med sig hem och sedan bygger den en tron\n
+		Raj Raj…\n\n
 
-De vaknar måndá morgon\noch har nu glömt en del\nDe drar då ut på staden\nmen någonting är fel\n
-Trottoarerna är smala\ndet gillar inte vi\nTROTTOAREN SKA VA BRED OCH SPRITEN DEN SKA VARA FRI!\n
-Röj Röj... Måndá!</string>
-
+		De vaknar måndá morgon\noch har nu glömt en del\nDe drar då ut på staden\nmen någonting är fel\n
+		Trottoarerna är smala\ndet gillar inte vi\nTROTTOAREN SKA VA BRED OCH SPRITEN DEN SKA VARA FRI!\n
+		Röj Röj… Måndá!</string>
+    <string name="enMandaGraver">En Månda han gräver hål var dag, var dag.\n Om inte funkar han ej som han ska, han ska.\n Med reflexväst och utan häst så gräver vi i månda mest.\n Vi är dom som sjunger allra bäst\n\n
+		När festen sedan tagit slut o skit, o skit.\n Och alla andra dehkkat både hit, o dit.\n Från kårahus till kårahus så dricker vi ur fulla krus\n Vi kan gräva upp varenda gata Vi kan gräva upp varenda gata!</string>
+    <string name="fiskebatFiskebat">Fiskebåt, fiskebåt, det är bra att ha.\n
+		Dricker man så blir man full, men bara om man har.\n
+		Fiskebåt, fiskebåt, det är bra att ha.\n
+		Dricker man så blir man full, men bara om man har.\n
+		Fiskebåt, fiskebåt…\n</string>
+    <string name="IPutMyHands">I put my hands upon her toe, Yahoo, yahoo I put my hands upon her toe, Yahoo, yahoo I put my hands upon her toe, she says, \"Hey, hey, you\'re much too low!\" Get in get out get fucking about, Yahoo yahoo yahoo\n\n
+		I put my hands upon her knee, Yahoo, yahoo I put my hands upon her knee, Yahoo, yahoo I put my hands upon her knee, she says, \"Hey, hey, you\'re teasing me!\" Get in get out get fucking about, Yahoo yahoo yahoo\n\n
+		I put my hands upon her tits, Yahoo, yahoo I put my hands upon her tits, Yahoo, yahoo I put my hands upon her tits, she says, \"Hey, hey, you\'ve lost your wits!\" Get in get out get fucking about, Yahoo yahoo yahoo\n\n
+		She put her hands around my dick, Yahoo, yahoo She put her hands around my dick, Yahoo, yahoo She put her hands around my dick, She says \"Hey, hey, it\'s much too thick!\" Get in get out get fucking about, Yahoo yahoo yahoo\n\n
+		I put my dick into her mouth, Yahoo, yahoo I put my dick into her mouth, Yahoo, yahoo I put my dick into her mouth, She says \"Ahh, ahh, mm mm, mm mm.\" Get in get out get fucking about, Yahoo yahoo yahoo\n\n
+		And now she lies in a wooden box, Yahoo, yahoo And now she lies in a wooden box, Yahoo, yahoo And now she lies in a wooden box, She sucked too many Månda-cocks Get in get out get fucking about, Yahoo yahoo yahoo\n\n
+		I dig her up every now and then, Yahoo, yahoo I dig her up every now and then, Yahoo, yahoo I dig her up every now and then, I fucked her once, I\'ll fuck her again Get in get out get fucking about, Yahoo yahoo yahoo\n\n</string>
+    <string name="Karahuset">        
+        Du kära lilla kårahus\n
+		här kommer jag igen\n
+		Nu är det dags för mera bus\n
+		nu är det fest igen\n\n
+		Kårahuset hoppfallera\n
+		å kårahuset hoppfallerej\n
+		é bra att ha, hoppfallera\n
+		för stackars mig, hoppfallerej\n\n
+		På Kårahuset capsar ja\n
+		för det är nått jag kan\n
+		Men andra capsar också bra\n
+		och jag blir till en man\n\n
+		Kårahuset…\n\n
+		Å efter capsen blir det sång\n
+		tills alla kastas ut\n
+		mot efterfestens hålligång\n
+		…och där tog minnet slut\n\n
+		Kårahuset…\n\n
+		Det får bli slut på festande\n
+		min skalle går i kras\n
+		men efter lite pluggande\n
+		så höjer jag mitt glas\n
+		Kårahuset…</string>
+    <string name="SpritenDenSlinkerNer">        
+        Orangea och gula\n
+		De lyser en smula\n
+		Och deras sånger hörs på lång väg\n
+		Trottoarer och rondeller, åt alla de känner\n
+		Måndá är gänget, de sjunger igen!\n\n
+		Hipp hurra\n
+		För här kommer Måndá\n
+		Gräver upp varenda gata\n
+		Och spriten den slinker ner\n\n
+		Fiskebåts-shoten\n
+		Med magiska doften\n
+		Och visst blir man glá om man dricker utav den\n
+		Ronnebykåren, vi saknar dem åren.\n
+		Men i våra minnen så lever den än!\n\n
+		Hipp hurra\n
+		För här kommer Måndá\n
+		Gräver upp varenda gata\n
+		Och spriten den slinker ner\n</string>
 </resources>
