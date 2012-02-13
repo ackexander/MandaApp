@@ -31,6 +31,9 @@ public class MandaAppActivity extends Activity {
 		try {
 			String searchResult = executeSearch(wikiSearch.getText().toString());
 			String information = getPageContext(searchResult);
+			Intent intent = new Intent(this, WikiActivity.class);
+			intent.putExtra("INFORMATION", information);
+			startActivity(intent);
 		} catch (Exception e) {
 			// TODO make toast
 		}
@@ -56,12 +59,12 @@ public class MandaAppActivity extends Activity {
 			throws Exception {
 		BufferedReader in = null;
 		String page = "";
-		searchWord = searchWord.replaceAll("å", "%C3%A5");
-		searchWord = searchWord.replaceAll("ä", "%C3%A4");
-		searchWord = searchWord.replaceAll("ö", "%C3%B6");
-		searchWord = searchWord.replaceAll("Å", "%C3%A5");
-		searchWord = searchWord.replaceAll("Ä", "%C3%A5");
-		searchWord = searchWord.replaceAll("Ö", "%C3%A5");
+		// searchWord = searchWord.replaceAll("å", "%C3%A5");
+		// searchWord = searchWord.replaceAll("ä", "%C3%A4");
+		// searchWord = searchWord.replaceAll("ö", "%C3%B6");
+		// searchWord = searchWord.replaceAll("Å", "%C3%A5");
+		// searchWord = searchWord.replaceAll("Ä", "%C3%A5");
+		// searchWord = searchWord.replaceAll("Ö", "%C3%A5");
 		try {
 			HttpClient client = new DefaultHttpClient();
 			HttpGet request = new HttpGet();
