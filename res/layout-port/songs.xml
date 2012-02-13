@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/songLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center" >
+
+    <ViewFlipper
+        android:id="@+id/songFlipper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigationLayout"
+        android:layout_alignParentTop="true" >
+
+        <ScrollView
+            android:id="@+id/balladenOmDenKaxigaMyranScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/balladenOmDenKaxigaMyranText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/balladenOmDenKaxigaMyran" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/enMandaGarPaVagenScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/enMandaGarPaVagenText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/enMandaGarPaVagen" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/enMandaGraverScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/enMandaGraverText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/enMandaGraver" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/fiskebatFiskebatScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/fiskebatFiskebatText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/fiskebatFiskebat" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/iPutMyHandsScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/iPutMyHandsText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/IPutMyHands" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/karahusetScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/karahusetText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/Karahuset" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/spritenDenSlinkerNerScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/spritenDenSlinkerNerText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/SpritenDenSlinkerNer" />
+        </ScrollView>
+    </ViewFlipper>
+
+    <LinearLayout
+        android:id="@+id/navigationLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/prevButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="prevSong"
+            android:text="@string/prev" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="nextSong"
+            android:text="@string/next" />
+    </LinearLayout>
+
+</RelativeLayout>

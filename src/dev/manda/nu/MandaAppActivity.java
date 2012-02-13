@@ -56,12 +56,12 @@ public class MandaAppActivity extends Activity {
 			throws Exception {
 		BufferedReader in = null;
 		String page = "";
-		searchWord.replaceAll("å", "%C3%A5");
-		searchWord.replaceAll("ä", "%C3%A4");
-		searchWord.replaceAll("ö", "%C3%B6");
-		searchWord.replaceAll("Å", "%C3%A5");
-		searchWord.replaceAll("Ä", "%C3%A5");
-		searchWord.replaceAll("ö", "%C3%A5");
+		searchWord = searchWord.replaceAll("å", "%C3%A5");
+		searchWord = searchWord.replaceAll("ä", "%C3%A4");
+		searchWord = searchWord.replaceAll("ö", "%C3%B6");
+		searchWord = searchWord.replaceAll("Å", "%C3%A5");
+		searchWord = searchWord.replaceAll("Ä", "%C3%A5");
+		searchWord = searchWord.replaceAll("Ö", "%C3%A5");
 		try {
 			HttpClient client = new DefaultHttpClient();
 			HttpGet request = new HttpGet();
@@ -93,12 +93,56 @@ public class MandaAppActivity extends Activity {
 		int contentStart = searchResult.indexOf("<!-- start content -->");
 		int contentEnd = searchResult.indexOf("<!-- end content -->");
 		searchResult = searchResult.substring(contentStart, contentEnd);
-		System.out.println(searchResult);
 		if (searchResult.contains("Kategori:Arbetare")) {
-			// TODO parsa arbetare
+			content = parseArbetare(searchResult);
 		} else {
 			// TODO parsa annat
 		}
 		return content;
+	}
+
+	private String parseArbetare(String searchResult) {
+		// Get "Faktaruta"
+		String arbetareContent = getFaktaruta(searchResult);
+		arbetareContent += "\nBeskrivning:\n" + getDescription(searchResult);
+		return arbetareContent;
+	}
+
+	private String getDescription(String searchResult) {
+		int descriptionStart = searchResult.indexOf("</table>");
+		int descriptionEnd = searchResult.indexOf("<div class=\"", descriptionStart);
+		String description = searchResult.substring(descriptionStart, descriptionEnd);
+		descriptionEnd = description.lastIndexOf("</p>");
+		description = description.substring(0, descriptionEnd);
+		description = description.replaceAll("\n", "");
+		description = description.replaceAll("</p>", "\n");
+		description = description.replaceAll("<.*?>", "");
+		description = description.trim();
+		return description;
+	}
+
+	private String getFaktaruta(String searchResult) {
+		String arbetareContent = "";
+		int factStart = searchResult.indexOf("<table>");
+		int factEnd = searchResult.indexOf("</table>");
+		String fact = searchResult.substring(factStart, factEnd);
+		factStart = fact.indexOf("Namn");
+		fact = fact.substring(factStart);
+		fact = fact.replaceAll("<\\S*>", "");
+		fact = fact.replaceAll("[\n]", "");
+		String[] split = fact.split("[\\s]");
+		for (int i = 0; i < split.length; i++) {
+			if (split[i].getBytes().length != 0) {
+				if (split[i].equals("Namn")) {
+					arbetareContent = split[i] + ":";
+				} else if (split[i].equals("Generation") || split[i].equals("Kallas") || split[i].equals("Årgång") || split[i].equals("Läs(er/te)")) {
+					arbetareContent += "\n" + split[i] + ":";
+				} else {
+					arbetareContent += " " + split[i];
+				}
+			}
+		}
+		arbetareContent += "\n";
+		return arbetareContent;
 	}
 }
