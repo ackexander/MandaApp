@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -30,8 +32,8 @@ public class MandaAppActivity extends Activity {
 		EditText wikiSearch = (EditText) findViewById(R.id.wikiSearchText);
 		try {
 			String searchResult = executeSearch(wikiSearch.getText().toString());
-			String information = getPageContext(searchResult);
 			Intent intent = new Intent(this, WikiActivity.class);
+			String information = getPageContext(searchResult, intent);
 			intent.putExtra("INFORMATION", information);
 			startActivity(intent);
 		} catch (Exception e) {
@@ -91,24 +93,45 @@ public class MandaAppActivity extends Activity {
 		return page;
 	}
 
-	private String getPageContext(String searchResult) {
+	private String getPageContext(String searchResult, Intent intent) {
 		String content = "";
 		int contentStart = searchResult.indexOf("<!-- start content -->");
 		int contentEnd = searchResult.indexOf("<!-- end content -->");
 		searchResult = searchResult.substring(contentStart, contentEnd);
 		if (searchResult.contains("Kategori:Arbetare")) {
-			content = parseArbetare(searchResult);
+			content = parseArbetare(searchResult, intent);
 		} else {
 			// TODO parsa annat
 		}
 		return content;
 	}
 
-	private String parseArbetare(String searchResult) {
-		// Get "Faktaruta"
+	private String parseArbetare(String searchResult, Intent intent) {
 		String arbetareContent = getFaktaruta(searchResult);
 		arbetareContent += "\nBeskrivning:\n" + getDescription(searchResult);
+		String imageURL = getImageURL(searchResult);
+		if (imageURL != "") {
+			intent.putExtra("IMAGE", imageURL);
+		}
 		return arbetareContent;
+	}
+
+	private String getImageURL(String searchResult) {
+		String imageURL = "";
+		int startImage = searchResult.indexOf("<div class=\"thumbinner\"");
+		if (startImage != -1) {
+			int endImage = searchResult.indexOf("</a>", startImage);
+			imageURL = searchResult.substring(startImage, endImage);
+			Pattern p = Pattern.compile("src=\".*?\"");
+			Matcher matcher = p.matcher(imageURL);
+			if (matcher.find()) {
+				imageURL = matcher.group();
+				imageURL = "http://manda.nu" + imageURL.substring(5, imageURL.length() - 1);
+			} else {
+				imageURL = "";
+			}
+		}
+		return imageURL;
 	}
 
 	private String getDescription(String searchResult) {
@@ -117,10 +140,21 @@ public class MandaAppActivity extends Activity {
 		String description = searchResult.substring(descriptionStart, descriptionEnd);
 		descriptionEnd = description.lastIndexOf("</p>");
 		description = description.substring(0, descriptionEnd);
+		description = formatDescription(description);
+		description = description.trim();
+		return description;
+	}
+
+	private String formatDescription(String description) {
 		description = description.replaceAll("\n", "");
 		description = description.replaceAll("</p>", "\n");
 		description = description.replaceAll("<.*?>", "");
-		description = description.trim();
+		description = description.replaceAll("\\.", ". ");
+		description = description.replaceAll("\\.  ", ". ");
+		description = description.replaceAll("\\?", "? ");
+		description = description.replaceAll("\\?  ", "? ");
+		description = description.replaceAll("!", "! ");
+		description = description.replaceAll("!  ", "! ");
 		return description;
 	}
 
