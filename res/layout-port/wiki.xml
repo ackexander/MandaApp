@@ -4,10 +4,24 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
 
     <TextView
         android:id="@+id/wikiText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/wikiImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wikiText"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/bildPaArbetare"
+        android:paddingTop="15dp" />
+    
+    </RelativeLayout>
 
 </ScrollView>

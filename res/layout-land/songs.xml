@@ -117,14 +117,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="prevSong"
-            android:text="@string/prev" />
+            android:text="@string/prev"
+             />
 
         <Button
             android:id="@+id/nextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="nextSong"
-            android:text="@string/next" />
+            android:text="@string/next"
+             />
     </LinearLayout>
 
 </RelativeLayout>

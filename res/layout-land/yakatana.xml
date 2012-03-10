@@ -22,14 +22,48 @@
             android:layout_width="102dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/personsHint" />
-        <Button
-            android:id="@+id/makeButton"
-            android:layout_width="wrap_content"
+            android:hint="@string/personsHint" android:inputType="number"/>
+
+        <RelativeLayout
+            android:id="@+id/yakatanaButtonLayout"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.34"
-            android:onClick="generateYakatanaRecipe"
-            android:text="@string/make" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/manda_button_style"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/yakatanaButtonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/manda_border" android:contentDescription="@string/mandaBorder"/>
+
+
+
+            <Button
+                android:id="@+id/yakatanaButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/imageView1"
+                android:layout_toRightOf="@+id/yakatanaButtonLeft"
+                android:background="@drawable/manda_button_style"
+                android:text="@string/make" />
+
+
+            <ImageView
+                android:id="@+id/yakatanaButtonRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/manda_border" android:contentDescription="@string/mandaBorder"/>
+
+        </RelativeLayout>
+
     </LinearLayout>
 
     <ScrollView

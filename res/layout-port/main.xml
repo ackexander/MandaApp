@@ -7,63 +7,178 @@
 
     <ImageView
         android:id="@+id/mandaImage"
-        android:layout_width="278dp"
-        android:layout_height="337dp"
+        android:layout_width="236dp"
+        android:layout_height="305dp"
         android:layout_gravity="center"
         android:contentDescription="@string/app_name"
         android:src="@drawable/manda_logo" />
-
-    <TableRow
-        android:id="@+id/actionRow"
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
-
+        android:layout_height="wrap_content" >
+
         <Button
             android:id="@+id/yakatanaButton"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/manda_button_style"
             android:onClick="yakatanaRecipe"
             android:text="@string/yakatana" />
 
-        <Button
-            android:id="@+id/psangerButton"
+        <ImageView
+            android:id="@+id/ImageView01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/manda_border" />
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/manda_border" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp" >
+
+        <Button
+            android:id="@+id/psangerButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/manda_button_style"
             android:onClick="songList"
             android:text="@string/psanger" />
 
-        <Button
-            android:id="@+id/images"
+        <ImageView
+            android:id="@+id/ImageView04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="imageGallery"
-            android:text="@string/images" />
-    </TableRow>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-
-        <Button
-            android:id="@+id/wikiButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:onClick="searchWiki"
-            android:text="@string/search" />
+            android:layout_alignParentTop="true"
+            android:src="@drawable/manda_border" />
 
-        <EditText
-            android:id="@+id/wikiSearchText"
+        <ImageView
+            android:id="@+id/ImageView03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/wikiButton"
-            android:hint="@string/search_hint" />
+            android:layout_alignParentTop="true"
+            android:src="@drawable/manda_border" />
 
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp" >
+
+        <Button
+            android:id="@+id/images"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/manda_button_style"
+            android:onClick="imageGallery"
+            android:text="@string/images" />
+
+        <ImageView
+            android:id="@+id/ImageView06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/manda_border" />
+
+        <ImageView
+            android:id="@+id/ImageView05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/manda_border" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/ImageView08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/manda_border" />
+
+            <ImageView
+                android:id="@+id/ImageView07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/wikiSearchText"
+                android:paddingLeft="2dp"
+                android:src="@drawable/manda_border" />
+
+            <EditText
+                android:id="@+id/wikiSearchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/ImageView10"
+                android:background="@drawable/manda_search"
+                android:hint="@string/search_hint" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/wikiButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/ImageView08"
+                android:layout_toRightOf="@+id/ImageView07"
+                android:background="@drawable/manda_button_style"
+                android:onClick="searchWiki"
+                android:text="@string/search" />
+
+            <ImageView
+                android:id="@+id/ImageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/manda_border" />
+
+            <ImageView
+                android:id="@+id/ImageView09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/wikiSearchText"
+                android:src="@drawable/manda_border" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
